@@ -1,4 +1,4 @@
-package com.example.mymap
+package com.example.mymap.adapter
 
 import android.app.AlertDialog
 import android.app.Dialog

@@ -5,7 +5,10 @@
       <map>
         <entry key="..\:/android/MyMap/app/src/main/res/drawable/btn_background_style.xml" value="0.177" />
         <entry key="..\:/android/MyMap/app/src/main/res/drawable/et_background_style.xml" value="0.177" />
+        <entry key="..\:/android/MyMap/app/src/main/res/drawable/ic_baseline_assistant_direction_24.xml" value="0.12" />
+        <entry key="..\:/android/MyMap/app/src/main/res/drawable/ic_baseline_gps_fixed_24.xml" value="0.12" />
         <entry key="..\:/android/MyMap/app/src/main/res/layout/activity_filter.xml" value="0.22" />
+        <entry key="..\:/android/MyMap/app/src/main/res/layout/activity_maps.xml" value="0.22" />
         <entry key="..\:/android/MyMap/app/src/main/res/layout/fragment_filter.xml" value="0.36666666666666664" />
         <entry key="..\:/android/MyMap/app/src/main/res/layout/fragment_splash.xml" value="0.18" />
         <entry key="..\:/android/MyMap/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.177" />
