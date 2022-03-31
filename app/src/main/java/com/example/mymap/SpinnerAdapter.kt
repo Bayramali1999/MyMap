@@ -35,6 +35,7 @@ class SpinnerAdapter : DialogFragment() {
                 }
                 .setPositiveButton("Tanlash") { di, _ ->
                     this.listener.onItemSelected(this.ids)
+                    ids = 0
                     di.dismiss()
                 }
                 .setNegativeButton("Ortga") { di, _ ->
