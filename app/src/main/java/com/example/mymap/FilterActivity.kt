@@ -21,6 +21,6 @@ class FilterActivity : AppCompatActivity() {
         (Handler()).postDelayed({
             supportFragmentManager.beginTransaction().replace(R.id.container, FilterFragment())
                 .commit()
-        }, 3000)
+        }, 2000)
     }
 }

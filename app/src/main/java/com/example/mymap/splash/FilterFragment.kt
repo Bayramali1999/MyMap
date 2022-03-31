@@ -1,12 +1,14 @@
 package com.example.mymap.splash
 
+import android.content.Intent
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
+import com.example.mymap.MapsActivity
 import com.example.mymap.R
-import com.example.mymap.SpinnerAdapter
+import com.example.mymap.adapter.SpinnerAdapter
 import com.example.mymap.constants.Constants.Iqtisodiyot
 import com.example.mymap.constants.Constants.PROVINCES
 import com.example.mymap.constants.Constants.TASHKENT_UNIVERSITY
@@ -37,6 +39,7 @@ import com.example.mymap.constants.Constants.yuridik
 import com.example.mymap.constants.Constants.yuridikIqtisoslashgan
 import com.example.mymap.data.TTJLocation
 import com.example.mymap.listener.OnItemSelectListener
+import com.google.android.gms.maps.model.LatLng
 import kotlinx.android.synthetic.main.fragment_filter.*
 
 class FilterFragment : Fragment() {
@@ -45,7 +48,8 @@ class FilterFragment : Fragment() {
     private var universitetId = -1
     private var ttjId = -1
     private val dialog = SpinnerAdapter()
-    private var ttjText = "TTJ"
+    private var name = "TTJ"
+    private lateinit var location: LatLng
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -57,7 +61,6 @@ class FilterFragment : Fragment() {
 
     override fun onResume() {
         super.onResume()
-
 
         viloyat.setOnClickListener {
             val listener = object : OnItemSelectListener {
@@ -186,6 +189,12 @@ class FilterFragment : Fragment() {
         }
 
 
+        btn_topish.setOnClickListener {
+            val intent = Intent(activity, MapsActivity::class.java)
+            intent.putExtra("location", location)
+            intent.putExtra("name", name)
+            startActivity(intent)
+        }
     }
 
     private fun selectCountryItem(array: Array<String>) {
@@ -208,7 +217,9 @@ class FilterFragment : Fragment() {
                 if (id > -1) {
                     ttjId = id
                     btn_topish.isEnabled = true
-                    ttj.text = myList[id].name
+                    name = myList[id].name
+                    ttj.text = name
+                    location = myList[id].latLng
                 }
             }
         }
