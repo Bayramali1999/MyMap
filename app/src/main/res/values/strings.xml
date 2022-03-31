@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">My Map</string>
+    <string name="title_activity_maps">MapsActivity</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="viloyat">Viloyat</string>
+    <string name="ttj">TTJ</string>
+    <string name="universitet">Universitet</string>
+    <string name="tuman">Tuman</string>
+    <string name="topish">Topish</string>
+</resources>
